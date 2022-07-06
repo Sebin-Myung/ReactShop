@@ -1,6 +1,6 @@
-import {atom} from "recoil";
+import { atom } from "recoil";
 
 export const searchListOpen = atom({
-  key: 'searchListOpen',
-  default: false
-})
+  key: "searchListOpen",
+  default: false,
+});

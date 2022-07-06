@@ -1,7 +1,7 @@
 export const CategoryKR = {
-  "fashion": "패션",
-  "accessory": "액세서리",
-  "digital": "디지털"
+  fashion: "패션",
+  accessory: "액세서리",
+  digital: "디지털",
 };
 
 export const Category = {

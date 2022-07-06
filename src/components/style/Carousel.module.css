@@ -1,4 +1,4 @@
-.carousel img{
+.carousel img {
   height: 700px;
   object-fit: cover;
 }
@@ -14,7 +14,7 @@
   padding-right: 2.5rem;
   margin-bottom: 2.5rem;
 }
-.caption > h3{
+.caption > h3 {
   font-size: 2.25rem;
   line-height: 2.5rem;
   color: white;
@@ -31,7 +31,7 @@
   height: 3rem;
   padding: 0 1rem !important;
   min-height: 3rem;
-  font-size: .875rem !important;
+  font-size: 0.875rem !important;
   font-weight: 600 !important;
   border: 0 !important;
 }
@@ -51,10 +51,10 @@
   }
 }
 @media (max-width: 1024px) {
-  .carousel img{
+  .carousel img {
     height: 220px;
   }
-  .caption > h3{
+  .caption > h3 {
     font-size: 1.5rem;
     line-height: 2rem;
   }

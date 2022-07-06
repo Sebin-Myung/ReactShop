@@ -1,58 +1,64 @@
-import React from 'react'
-import styles from './style/ItemCard.module.css'
-import { useRecoilState } from 'recoil'
-import {cartState} from '../atoms/cartItem'
-import { Link } from 'react-router-dom'
+import React from "react";
+import styles from "./style/ItemCard.module.css";
+import { useRecoilState } from "recoil";
+import { cartState } from "../atoms/cartItem";
+import { Link } from "react-router-dom";
 
-function ItemCard({product}) {
+function ItemCard({ product }) {
   const [cartItem, setCartItem] = useRecoilState(cartState);
-  
+
   const updateCartCount = (id, n) => {
     const updatedCart = cartItem.map((item) => {
       if (item.id === id) {
-        return {...item, count: item.count + n}
+        return { ...item, count: item.count + n };
       } else {
-        return item
+        return item;
       }
     });
-    localStorage.setItem('cart', JSON.stringify(updatedCart))
-    setCartItem(updatedCart)
-  }
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    setCartItem(updatedCart);
+  };
 
   const deleteCartItem = (id) => {
-    let newItemList = cartItem.filter(item =>item.id !==id )
-    localStorage.setItem('cart', JSON.stringify(newItemList))
-    setCartItem(newItemList)
-  }
-  
+    let newItemList = cartItem.filter((item) => item.id !== id);
+    localStorage.setItem("cart", JSON.stringify(newItemList));
+    setCartItem(newItemList);
+  };
+
   const plus = () => {
-    updateCartCount(product.id, 1)
-  }
+    updateCartCount(product.id, 1);
+  };
 
   const minus = () => {
-    if(product.count < 2){
-      deleteCartItem(product.id)
+    if (product.count < 2) {
+      deleteCartItem(product.id);
       return;
     }
-    updateCartCount(product.id, -1)
-  }
+    updateCartCount(product.id, -1);
+  };
 
   return (
     <div className={styles.productCard}>
       <figure className={styles.productCardImgBox}>
-        <img src={product.image} alt={'상품 이미지'} className={styles.productCardImg} />
+        <img src={product.image} alt={"상품 이미지"} className={styles.productCardImg} />
       </figure>
       <div className={styles.productDetail}>
-        <h2><Link to={`/product/${product.id}`}>{product.title}</Link></h2>
+        <h2>
+          <Link to={`/product/${product.id}`}>{product.title}</Link>
+        </h2>
         <p>${Math.round(product.price * product.count)}</p>
         <div className={styles.counter}>
-          <div onClick={minus} className={styles.leftbtn}>-</div>
+          <div onClick={minus} className={styles.leftbtn}>
+            -
+          </div>
           <span>{product.count}</span>
-          <div onClick={plus} className={styles.rightbtn}>+</div>
+          <div onClick={plus} className={styles.rightbtn}>
+            +
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ItemCard
+export default ItemCard;

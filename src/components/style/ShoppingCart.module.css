@@ -25,7 +25,7 @@
   align-items: center;
 }
 .breadcrumbs li + li::before {
-  content: '';
+  content: "";
   display: block;
   width: 0.375rem;
   height: 0.375rem;
@@ -60,7 +60,7 @@
 .total > button {
   font-size: 0.875rem;
   height: 3rem;
-  background-color: #5014B8;
+  background-color: #5014b8;
   border: 0;
 }
 

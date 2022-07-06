@@ -1,6 +1,6 @@
-import {atom} from "recoil";
+import { atom } from "recoil";
 
 export const darkModeState = atom({
-  key: 'darkMode',
-  default: localStorage.getItem('reactShopIsDarkMode') === 'true' || false
-})
+  key: "darkMode",
+  default: localStorage.getItem("reactShopIsDarkMode") === "true" || false,
+});

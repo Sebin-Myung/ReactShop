@@ -44,7 +44,7 @@
   text-decoration: none;
   color: inherit;
 }
-.productDetail a:hover{
+.productDetail a:hover {
   text-decoration: underline;
   color: inherit;
 }
@@ -64,7 +64,7 @@
 }
 
 .leftbtn {
-  background-color: #5014B8;
+  background-color: #5014b8;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
   cursor: pointer;
@@ -72,7 +72,7 @@
 }
 
 .rightbtn {
-  background-color: #5014B8;
+  background-color: #5014b8;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
   cursor: pointer;

@@ -187,10 +187,10 @@
 .searchList {
   display: flex;
   flex-direction: column;
-  position:absolute;
+  position: absolute;
   top: 3.5rem;
   width: 16rem;
-  background-color: #292D3E;
+  background-color: #292d3e;
   max-height: 24rem;
   overflow-y: scroll;
   padding: 0;
@@ -232,7 +232,7 @@
   align-items: center;
   justify-content: center;
   background-color: red;
-  border-radius: 50%;;
+  border-radius: 50%;
   color: white;
   position: absolute;
   left: 25px;
